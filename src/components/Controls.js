@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './MusicBar.css';
+import './Controls.css';
 
-class MusicBar extends Component {
+class Controls extends Component {
   render() {
     return (
       <div>
@@ -11,4 +11,4 @@ class MusicBar extends Component {
   }
 }
 
-export default MusicBar;
+export default Controls;

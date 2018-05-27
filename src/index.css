@@ -2,4 +2,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  display:grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 50% 45% 5%;
 }
+

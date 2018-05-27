@@ -1,0 +1,34 @@
+.artist-container {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start:1;
+  grid-row-end:2;
+}
+
+.visualization-container {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start:1;
+  grid-row-end:2;
+}
+
+.album-container {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start:2;
+  grid-row-end:3;
+}
+
+.song-list-container {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start:2;
+  grid-row-end:3;
+}
+
+.controls-container {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start:3;
+  grid-row-end:4;
+}
