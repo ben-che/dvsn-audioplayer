@@ -4,7 +4,7 @@ import './Artist.css';
 class Artist extends Component {
   render() {
     return (
-      <div>
+      <div className="artist-body">
         
       </div>
     );
