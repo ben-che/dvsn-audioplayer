@@ -1,4 +1,37 @@
 .song-list-body {
     background-color:rgba(1,1,1,0.6);
     height:100%;
+    overflow:scroll;
+}
+
+.tracklist-header {
+    width:90%;
+    padding-right:5%;
+    padding-left:5%;
+    background-color:grey;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.tracklist-header-title-padding {
+    padding-top:2.5%;
+    padding-bottom:1%;
+    border-bottom:black 2px solid;
+}
+
+.single-track-container {
+    width:90%;
+    padding:5%;
+    background-color:white;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.name-spacing {
+    -webkit-margin-start: 10px
+}
+
+.name-spacing-fix {
+    -webkit-margin-start: -10px
 }

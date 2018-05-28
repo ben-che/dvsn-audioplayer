@@ -12,7 +12,8 @@ class App extends Component {
     this.state = {
       trackList: [{
         name: 'placeholder',
-        source: 'placeholder'
+        source: 'placeholder',
+        duration: 'xx:xx'
       }]
     }
   }

@@ -5,17 +5,21 @@ class SongList extends Component {
   render() {
     let trackListJSX = this.props.trackList.map((element, id) => {
       return (
-        <div>
-
-          <p>{`${id}. ${element.name}`}</p>
-          <p>{element.source}</p>
-
-          </div>
+        <div className="single-track-container">
+          <p>{`${id+1}.`} <span className="name-spacing">{element.name}</span></p>
+          <p className="name-spacing-fix">{element.duration}</p>
+        </div>
       )
     })
     return (
       <div className="song-list-body">
+        <div className="tracklist-header">
+          <h2 className="tracklist-header-title-padding">Track</h2>
+          <h2 className="tracklist-header-title-padding">Duration</h2>
+        </div>
+
         {trackListJSX}
+
       </div>
     );
   }
