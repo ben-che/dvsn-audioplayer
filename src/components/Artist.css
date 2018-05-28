@@ -1,18 +1,11 @@
 .artist-body {
     width:100%;
     height:100%;
-    padding-top:60%;
+    padding-top:55%;
     padding-left:5%;
     background: url('./../img/album.jpg');
     background-size:cover;
     background-position: center;
-}
-
-.accent-bar {
-    background-color:#444;
-    height:5px;
-    width:50px;
-    padding:0;
 }
 
 .artist-header-thin {
@@ -25,6 +18,6 @@
   .artist-subheader {
     font-family: 'Dosis', sans-serif;
     font-weight:500;
-    color:grey;
+    color:#d896ff;
     font-size:1vw;
   }

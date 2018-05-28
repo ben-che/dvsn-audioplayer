@@ -59,3 +59,18 @@
   grid-row-start:3;
   grid-row-end:4;
 }
+
+/* Globals */
+.accent-bar {
+  background-color:#444;
+  height:5px;
+  width:50px;
+  margin-top:10px;
+}
+
+.accent-bar-alt {
+  background-color:#efbbff;
+  height:5px;
+  width:50px;
+  margin-top:10px;
+}
