@@ -4,8 +4,8 @@ import './Controls.css';
 class Controls extends Component {
   render() {
     return (
-      <div>
-        
+      <div className="controls-body">
+        a
       </div>
     );
   }

@@ -4,7 +4,7 @@ import './Visualization.css';
 class Visualization extends Component {
   render() {
     return (
-      <div>
+      <div className="">
         
       </div>
     );

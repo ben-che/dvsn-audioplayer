@@ -1,5 +1,5 @@
 html {
-  height:90%;
+  height:100%;
 }
 
 body {
@@ -7,8 +7,6 @@ body {
   font-family: sans-serif;
   padding-left:10%;
   padding-right:10%;
-  padding-top:2%;
-  padding-bottom:2%;
   background-color:#333;
   height:100%;
 }
