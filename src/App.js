@@ -7,6 +7,16 @@ import Visualization from './components/Visualization';
 import Controls from './components/Controls';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      trackList: [{
+        name: 'placeholder',
+        source: 'placeholder'
+      }]
+    }
+  }
+
   render() {
     return (
       <div style={{'height':'100%'}}>
@@ -15,7 +25,7 @@ class App extends Component {
           <div className="artist-container"><Artist /></div>
           <div className="visualization-container"><Visualization /></div>
           <div className="album-container"><Album /></div>
-          <div className="song-list-container"><SongList /></div>
+          <div className="song-list-container"><SongList trackList = {this.state.trackList}/></div>
           <div className="controls-container"><Controls /></div>
         </div>
       </div>
