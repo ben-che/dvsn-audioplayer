@@ -1,3 +1,7 @@
+html {
+  height:90%;
+}
+
 body {
   margin: 0;
   font-family: sans-serif;
@@ -9,3 +13,13 @@ body {
   height:100%;
 }
 
+h1, h2, p {
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+#root {
+  height:100%
+}

@@ -9,7 +9,7 @@ import Controls from './components/Controls';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div style={{'height':'100%'}}>
         <div className="background-image-blur" />
         <div className="player-container">
           <div className="artist-container"><Artist /></div>

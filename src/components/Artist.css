@@ -4,7 +4,7 @@
     padding-top:60%;
     padding-left:5%;
     background: url('./../img/album.jpg');
-    background-size:110%;
+    background-size:cover;
     background-position: center;
 }
 
@@ -20,8 +20,6 @@
     font-family: 'Dosis', sans-serif;
     font-weight:100;
     color:white;
-    padding-bottom:0;
-    line-height: 0;
   }
 
   .artist-subheader {

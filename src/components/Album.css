@@ -1,0 +1,10 @@
+.album-body {
+    height:100%;
+    width:100%;
+    font-family: 'Dosis', sans-serif;
+    font-weight:600;
+    color:whitesmoke;
+    font-size:1vw;
+    padding-left:5%;
+    background-color:rgba(127, 102, 178, 0.4);
+}
