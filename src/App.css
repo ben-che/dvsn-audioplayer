@@ -1,3 +1,23 @@
+.player-container {
+  display:grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 50% 45% 5%;
+}
+
+.background-image-blur {
+  position: absolute;
+  z-index:-1;
+  height:100%;
+  width:100%;
+  background: url('./img/blur.jpeg');
+  background-size:cover;
+  background-position: center;
+  filter:blur(15px);
+  opacity:0.5;
+  top:0;
+  left:0;
+}
+
 .artist-container {
   grid-column-start: 1;
   grid-column-end: 2;

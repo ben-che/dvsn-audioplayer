@@ -10,11 +10,14 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="artist-container"><Artist /></div>
-        <div className="visualization-container"><Visualization /></div>
-        <div className="album-container"><Album /></div>
-        <div className="song-list-container"><SongList /></div>
-        <div className="controls-container"><Controls /></div>
+        <div className="background-image-blur" />
+        <div className="player-container">
+          <div className="artist-container"><Artist /></div>
+          <div className="visualization-container"><Visualization /></div>
+          <div className="album-container"><Album /></div>
+          <div className="song-list-container"><SongList /></div>
+          <div className="controls-container"><Controls /></div>
+        </div>
       </div>
     );
   }

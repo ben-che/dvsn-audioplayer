@@ -3,6 +3,9 @@
     height:100%;
     padding-top:60%;
     padding-right:5%;
+    background: url('./../img/album.jpg');
+    background-size:cover;
+    background-position: center;
 }
 
 .accent-bar {
