@@ -4,7 +4,7 @@ import './SongList.css';
 class SongList extends Component {
   render() {
     return (
-      <div>
+      <div className="song-list-body">
         
       </div>
     );

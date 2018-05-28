@@ -15,16 +15,17 @@
 
 .album-header-thick {
     font-family: 'Dosis', sans-serif;
-    font-weight:600;
-    color:white;
+    font-weight:200;
+    color:rgba(255, 168, 7, 0.753);
     font-size:1vw;
     padding-top:5%;
 }
 
 .album-review {
-    padding-top:5%;
+    padding-top:7.5%;
     font-family: 'Raleway', sans-serif;
     font-weight:200;
-    color:#d896ff;
+    /* color:#d896ff; */
+    color:#aaa;
     letter-spacing: 1px;
 }

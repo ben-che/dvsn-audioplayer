@@ -16,6 +16,7 @@ h1, h2, p {
   -webkit-margin-after: 0em;
   -webkit-margin-start: 0px;
   -webkit-margin-end: 0px;
+  font-weight:inherit;
 }
 
 #root {
