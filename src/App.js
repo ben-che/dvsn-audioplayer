@@ -11,9 +11,45 @@ class App extends Component {
     super();
     this.state = {
       trackList: [{
-        name: 'placeholder',
+        name: 'With Me',
         source: 'placeholder',
-        duration: 'xx:xx'
+        duration: '6:59'
+      },{
+        name: 'Too Deep',
+        source: 'placeholder',
+        duration: '3:20'
+      },{
+        name: 'Try / Effortless',
+        source: 'placeholder',
+        duration: '5:33'
+      },{
+        name: 'Do It Well',
+        source: 'placeholder',
+        duration: '4:11'
+      },{
+        name: 'In + Out',
+        source: 'placeholder',
+        duration: '3:46'
+      },{
+        name: 'Sept. 5th',
+        source: 'placeholder',
+        duration: '3:56'
+      },{
+        name: 'Hallucinations',
+        source: 'placeholder',
+        duration: '4:06'
+      },{
+        name: 'Another One',
+        source: 'placeholder',
+        duration: '3:49'
+      },{
+        name: 'Angela',
+        source: 'placeholder',
+        duration: '3:49'
+      },{
+        name: 'The Line',
+        source: 'placeholder',
+        duration: '7:11'
       }]
     }
   }
