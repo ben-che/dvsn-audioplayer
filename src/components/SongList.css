@@ -53,3 +53,27 @@
 .name-spacing-fix {
     -webkit-margin-start: -10px
 }
+
+.active-song {
+    background: linear-gradient(270deg, rgba(236, 174, 223, 0.2), rgba(187, 144, 236, 0.21), rgba(205, 181, 232, 0.21), rgba(224, 176, 232, 0.21));
+    background-size: 800% 800%;
+    -webkit-animation: anim-background 5s linear infinite;
+    -moz-animation: anim-background 5s linear infinite;
+    animation: anim-background 5s linear infinite;
+}
+
+@-webkit-keyframes anim-background {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes anim-background {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes anim-background { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
