@@ -63,6 +63,16 @@ class App extends Component {
     })
   }
 
+  playPause = () => {
+    this.setState({
+      isPlaying: !this.state.isPlaying
+    })
+  }
+
+  nextPrev = (id) => {
+
+  }
+
   render() {
     return (
       <div style={{'height':'100%'}}>
@@ -72,7 +82,9 @@ class App extends Component {
           <div className="visualization-container"><Visualization /></div>
           <div className="album-container"><Album /></div>
           <div className="song-list-container"><SongList trackList = {this.state.trackList} currentSong = {this.state.currentSong} selectSong={this.selectSong}/></div>
-          <div className="controls-container"><Controls currentSong = {this.state.currentSong} isPlaying = {this.state.isPlaying}/></div>
+          <div className="controls-container"><Controls currentSong = {this.state.currentSong} 
+                                                        isPlaying = {this.state.isPlaying}
+                                                        playPause = {this.playPause} /></div>
         </div>
       </div>
     );

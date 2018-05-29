@@ -7,8 +7,21 @@ class Controls extends Component {
   render() {
     return (
       <div className="controls-body">
-        {this.props.currentSong.name}
-        <div className="play-pause-icon">{this.props.isPlaying ? <Pause color="white" /> : <Play color="white" />}</div>
+        <div className="info-container">
+          <div className="info-flex">
+            <p>{this.props.currentSong.name}</p>
+            <p>{this.props.currentSong.duration}</p>
+          </div>
+        </div>
+
+          <div className="icon-container">
+            <div className="icon-flex">
+              <div onClick={this.props.playPause} className="play-pause-icon">
+                {this.props.isPlaying ? <Pause color="white" /> : <Play color="white" />}
+              </div>
+          </div>
+        </div>
+
       </div>
     );
   }
