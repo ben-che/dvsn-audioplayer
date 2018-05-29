@@ -70,7 +70,27 @@ class App extends Component {
   }
 
   nextPrev = (id) => {
-
+    if (this.state.currentSong.name === "With Me" || this.state.currentSong.name === "The Line") {
+      return;
+    }
+    if (id === -1) {
+      for (let i = 0; i <= this.state.trackList.length; i++) {
+        if (this.state.trackList[i] === this.state.currentSong) {
+          this.setState({
+            currentSong: this.state.trackList[i-1]
+          })
+        }
+      }
+    }
+    else {
+      for (let i = 0; i <= this.state.trackList.length; i++) {
+        if (this.state.trackList[i] === this.state.currentSong) {
+          this.setState({
+            currentSong: this.state.trackList[i+1]
+          })
+        }
+      }
+    }
   }
 
   render() {
@@ -84,7 +104,8 @@ class App extends Component {
           <div className="song-list-container"><SongList trackList = {this.state.trackList} currentSong = {this.state.currentSong} selectSong={this.selectSong}/></div>
           <div className="controls-container"><Controls currentSong = {this.state.currentSong} 
                                                         isPlaying = {this.state.isPlaying}
-                                                        playPause = {this.playPause} /></div>
+                                                        playPause = {this.playPause} 
+                                                        nextPrev = {this.nextPrev}/></div>
         </div>
       </div>
     );

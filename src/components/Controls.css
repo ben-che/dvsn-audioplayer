@@ -37,7 +37,15 @@
 }
 
 .play-pause-icon {
-    color: white;
     font-size: 2.5vmax;
     cursor:pointer;
+}
+
+.next-prev-icon {
+    font-size:2vmax;
+    cursor:pointer
+}
+
+.next-prev-disabled {
+    cursor:default;
 }
