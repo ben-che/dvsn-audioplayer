@@ -12,15 +12,26 @@
   left:0;
 }
 
+.background-image-overlay {
+  position: absolute;
+  z-index:-2;
+  height:100%;
+  width:100%;
+  background-color:rgba(255,255,255,0.2);
+  background-size:cover;
+  top:0;
+  left:0;
+}
+
 .player-container {
   height:90%;
   padding-top:2.5%;
   display:grid;
   grid-template-columns: 40% 60%;
   grid-template-rows: 50% 40% 10%;
-  -webkit-box-shadow: 0px 54px 84px -4px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 54px 84px -4px rgba(0,0,0,0.75);
-  box-shadow: 0px 54px 84px -4px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 54px 184px -4px rgba(0,0,0,0.85);
+  -moz-box-shadow: 0px 54px 184px -4px rgba(0,0,0,0.85);
+  box-shadow: 0px 54px 184px -4px rgba(0,0,0,0.85);
 }
 
 .artist-container {

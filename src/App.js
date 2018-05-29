@@ -70,10 +70,7 @@ class App extends Component {
   }
 
   nextPrev = (id) => {
-    if (this.state.currentSong.name === "With Me" || this.state.currentSong.name === "The Line") {
-      return;
-    }
-    if (id === -1) {
+    if (id === -1 && this.state.currentSong.name !== "With Me") {
       for (let i = 0; i <= this.state.trackList.length; i++) {
         if (this.state.trackList[i] === this.state.currentSong) {
           this.setState({
@@ -82,7 +79,7 @@ class App extends Component {
         }
       }
     }
-    else {
+    else if (id === 1 && this.state.currentSong.name !== "The Line") {
       for (let i = 0; i <= this.state.trackList.length; i++) {
         if (this.state.trackList[i] === this.state.currentSong) {
           this.setState({
@@ -97,6 +94,7 @@ class App extends Component {
     return (
       <div style={{'height':'100%'}}>
         <div className="background-image-blur" />
+        <div className="background-image-overlay" />
         <div className="player-container">
           <div className="artist-container"><Artist /></div>
           <div className="visualization-container"><Visualization /></div>
