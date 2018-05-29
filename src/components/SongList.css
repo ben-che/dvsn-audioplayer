@@ -1,31 +1,49 @@
 .song-list-body {
-    background-color:rgba(1,1,1,0.6);
     height:100%;
     overflow:scroll;
 }
 
 .tracklist-header {
-    width:90%;
-    padding-right:5%;
-    padding-left:5%;
-    background-color:grey;
+    width:92%;
+    padding-right:4%;
+    padding-left:4%;
+    background-color:rgba(1,1,1,0.8);
     display:flex;
     align-items: center;
     justify-content: space-between;
+    color: #d896ff;
+    font-family: "Dosis", sans-serif;
+    font-weight:600;
+    position:sticky;
+    top:0;
 }
+
 .tracklist-header-title-padding {
     padding-top:2.5%;
     padding-bottom:1%;
-    border-bottom:black 2px solid;
+    border-bottom:rgba(255, 168, 7, 0.753) 2px solid;
 }
 
 .single-track-container {
     width:90%;
     padding:5%;
-    background-color:white;
     display:flex;
     align-items: center;
     justify-content: space-between;
+    color:white;
+    background: rgba(27,27,38,0.75);
+    background: -moz-linear-gradient(top, rgba(27,27,38,0.75) 0%, rgba(50,42,87,0.75) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(27,27,38,0.75)), color-stop(100%, rgba(50,42,87,0.75)));
+    background: -webkit-linear-gradient(top, rgba(27,27,38,0.75) 0%, rgba(50,42,87,0.75) 100%);
+    background: -o-linear-gradient(top, rgba(27,27,38,0.75) 0%, rgba(50,42,87,0.75) 100%);
+    background: -ms-linear-gradient(top, rgba(27,27,38,0.75) 0%, rgba(50,42,87,0.75) 100%);
+    background: linear-gradient(to bottom, rgba(27,27,38,0.75) 0%, rgba(50,42,87,0.75) 100%);
+    cursor: pointer;
+}
+
+.single-track-container * {
+    font-family: 'Raleway', sans-serif;
+    font-weight:200;
 }
 
 .name-spacing {
