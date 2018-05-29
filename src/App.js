@@ -50,8 +50,15 @@ class App extends Component {
         name: 'The Line',
         source: 'placeholder',
         duration: '7:11'
-      }]
+      }],
+      currentSong: {}
     }
+  }
+
+  selectSong = (selectedSong) => {
+    this.setState({
+      currentSong : selectedSong
+    })
   }
 
   render() {
@@ -62,8 +69,8 @@ class App extends Component {
           <div className="artist-container"><Artist /></div>
           <div className="visualization-container"><Visualization /></div>
           <div className="album-container"><Album /></div>
-          <div className="song-list-container"><SongList trackList = {this.state.trackList}/></div>
-          <div className="controls-container"><Controls /></div>
+          <div className="song-list-container"><SongList trackList = {this.state.trackList} selectSong={this.selectSong}/></div>
+          <div className="controls-container"><Controls currentSong = {this.state.currentSong}/></div>
         </div>
       </div>
     );

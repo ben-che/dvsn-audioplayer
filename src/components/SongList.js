@@ -5,7 +5,7 @@ class SongList extends Component {
   render() {
     let trackListJSX = this.props.trackList.map((element, id) => {
       return (
-        <div className="single-track-container">
+        <div key={id} onClick = {() => this.props.selectSong(element)} className="single-track-container">
           <p>{`${id+1}.`} <span className="name-spacing">{element.name}</span></p>
           <p className="name-spacing-fix">{element.duration}</p>
         </div>

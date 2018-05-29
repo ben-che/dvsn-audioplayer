@@ -5,7 +5,7 @@ class Controls extends Component {
   render() {
     return (
       <div className="controls-body">
-        a
+        {this.props.currentSong.name}
       </div>
     );
   }
