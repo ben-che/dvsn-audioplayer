@@ -5,6 +5,7 @@ import Artist from "./components/Artist";
 import SongList from "./components/SongList";
 import Visualization from './components/Visualization';
 import Controls from './components/Controls';
+import TrackOne from './music/1.mp3';
 
 class App extends Component {
   constructor() {
@@ -12,43 +13,43 @@ class App extends Component {
     this.state = {
       trackList: [{
         name: 'With Me',
-        source: 'placeholder',
+        source: TrackOne,
         duration: '6:59'
       },{
         name: 'Too Deep',
-        source: 'placeholder',
+        source: './music/2.mp3',
         duration: '3:20'
       },{
         name: 'Try / Effortless',
-        source: 'placeholder',
+        source: './music/3.mp3',
         duration: '5:33'
       },{
         name: 'Do It Well',
-        source: 'placeholder',
+        source: './music/4.mp3',
         duration: '4:11'
       },{
         name: 'In + Out',
-        source: 'placeholder',
+        source: './music/5.mp3',
         duration: '3:46'
       },{
         name: 'Sept. 5th',
-        source: 'placeholder',
+        source: './music/6.mp3',
         duration: '3:56'
       },{
         name: 'Hallucinations',
-        source: 'placeholder',
+        source: './music/7.mp3',
         duration: '4:06'
       },{
         name: 'Another One',
-        source: 'placeholder',
+        source: './music/8.mp3',
         duration: '3:49'
       },{
         name: 'Angela',
-        source: 'placeholder',
+        source: './music/9.mp3',
         duration: '3:49'
       },{
         name: 'The Line',
-        source: 'placeholder',
+        source: './music/10.mp3',
         duration: '7:11'
       }],
       currentSong: {},
@@ -93,6 +94,7 @@ class App extends Component {
   render() {
     return (
       <div style={{'height':'100%'}}>
+        <audio id='x' src = {this.state.currentSong.source} />
         <div className="background-image-blur" />
         <div className="background-image-overlay" />
         <div className="player-container">
