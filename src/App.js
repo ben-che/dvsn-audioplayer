@@ -51,13 +51,15 @@ class App extends Component {
         source: 'placeholder',
         duration: '7:11'
       }],
-      currentSong: {}
+      currentSong: {},
+      isPlaying: false
     }
   }
 
   selectSong = (selectedSong) => {
     this.setState({
-      currentSong : selectedSong
+      currentSong : selectedSong,
+      isPlaying: true
     })
   }
 
@@ -70,7 +72,7 @@ class App extends Component {
           <div className="visualization-container"><Visualization /></div>
           <div className="album-container"><Album /></div>
           <div className="song-list-container"><SongList trackList = {this.state.trackList} selectSong={this.selectSong}/></div>
-          <div className="controls-container"><Controls currentSong = {this.state.currentSong}/></div>
+          <div className="controls-container"><Controls currentSong = {this.state.currentSong} isPlaying = {this.state.isPlaying}/></div>
         </div>
       </div>
     );
