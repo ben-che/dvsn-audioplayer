@@ -60,6 +60,7 @@
     -webkit-animation: anim-background 5s linear infinite;
     -moz-animation: anim-background 5s linear infinite;
     animation: anim-background 5s linear infinite;
+    border-left:rgba(255, 168, 7, 0.753) 5px solid;
 }
 
 @-webkit-keyframes anim-background {
