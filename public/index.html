@@ -52,8 +52,8 @@
         audioSrc.connect(analyser);
         audioSrc.connect(audioCtx.destination);
         let frequencyData = new Uint8Array(200);
-        let svgHeight = '650';
-        let svgWidth = '1200';
+        let svgHeight = '1800';
+        let svgWidth = '2000';
         let barPadding = '0.75';
 
         function createSvg(parent, height, width) {
@@ -78,11 +78,14 @@
           analyser.getByteFrequencyData(frequencyData);
           svg.selectAll('rect')
               .data(frequencyData) 
-              .attr('height', function(d) { 
-                return d;                       
+              .attr('y', function(d) {
+                return svgHeight - d * 4;
               })
-              .attr('fill', function(d) {  
-                return 'rgb('+d +',' +d + ',' + d + ')'; 
+              .attr('height', function(d) { 
+                return (d * 4);                       
+              })
+              .attr('fill', (d) => {  
+                return 'rgba('+d+",0,"+d/1.1+',0.45)';  
               });
         }
         renderChart();
