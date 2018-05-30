@@ -86,9 +86,11 @@ class App extends Component {
   }
 
   playPause = () => {
-    this.setState({
-      isPlaying: !this.state.isPlaying
-    })
+    if (this.state.currentSong.name !== undefined) {
+      this.setState({
+        isPlaying: !this.state.isPlaying
+      })
+    }
   }
 
   nextPrev = (id) => {
@@ -113,9 +115,11 @@ class App extends Component {
   }
 
   componentDidMount = () => {
+    const moment = require('moment');
     setInterval( () => {
+      console.log(moment().minutes(0).second(Math.ceil(this.audioRef.current.currentTime)).format("mm ss"))
       this.setState({
-        currentTime : Math.ceil(this.audioRef.current.currentTime)
+        currentTime : moment().minutes(0).second(Math.ceil(this.audioRef.current.currentTime)).format("m ss")
       })
     }, 1000);
   }

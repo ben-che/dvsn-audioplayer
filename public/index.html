@@ -54,7 +54,7 @@
         let frequencyData = new Uint8Array(200);
         let svgHeight = '1800';
         let svgWidth = '2000';
-        let barPadding = '0.75';
+        let barPadding = '5';
 
         function createSvg(parent, height, width) {
           return (d3.select(barsParent)
@@ -68,24 +68,24 @@
           .data(frequencyData)     
           .enter()                 
           .append('rect')          
-          .attr('x', function (d, elem) {     
+          .attr('x', (d, elem) => {     
               return elem * (svgWidth / frequencyData.length);   
           })
-          .attr('width', svgWidth / frequencyData.length - barPadding); 
+          .attr('width', svgWidth * 4 / frequencyData.length - barPadding); 
           
         function renderChart() {
           requestAnimationFrame(renderChart);
           analyser.getByteFrequencyData(frequencyData);
           svg.selectAll('rect')
               .data(frequencyData) 
-              .attr('y', function(d) {
-                return svgHeight - d * 4;
+              .attr('y', d => {
+                return svgHeight - d * 3;
               })
-              .attr('height', function(d) { 
-                return (d * 4);                       
+              .attr('height', d => { 
+                return (d * 3);                       
               })
               .attr('fill', (d) => {  
-                return 'rgba('+d+",0,"+d/1.1+',0.45)';  
+                return 'rgba('+d+",0,"+d/1.1+',0.25)';  
               });
         }
         renderChart();

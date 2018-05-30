@@ -14,7 +14,7 @@ class Controls extends Component {
         <div className="info-container">
           <div className="info-flex">
             <p>{this.props.currentSong.name}</p>
-            <p>{this.props.currentTime !== 0 ? `${this.props.currentTime + ' / '}` : null}  {this.props.currentSong.duration}</p>
+            <p>{this.props.currentTime !== "0 00" ? `${this.props.currentTime + ' / '}` : null}  {this.props.currentSong.duration}</p>
           </div>
         </div>
 
