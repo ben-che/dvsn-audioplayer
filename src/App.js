@@ -123,7 +123,7 @@ class App extends Component {
   render() {
   
     return (
-      <div style={{'height':'100%'}}>
+      <div className="app-wrap-container" >
         <audio ref={this.audioRef} id="audioPlayer" src={this.state.currentSong.source} />
         <div className="background-image-blur" />
         <div className="background-image-overlay" />
