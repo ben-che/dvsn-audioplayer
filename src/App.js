@@ -73,6 +73,9 @@ class App extends Component {
     if (this.state.isPlaying) {
       this.audioRef.current.play();
     }
+    else {
+      this.audioRef.current.pause();
+    }
   }
 
   selectSong = (selectedSong) => {
