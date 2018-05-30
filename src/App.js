@@ -121,9 +121,10 @@ class App extends Component {
   
     return (
       <div style={{'height':'100%'}}>
-        <audio ref={this.audioRef} src={this.state.currentSong.source} />
+        <audio ref={this.audioRef} id="audioPlayer" src={this.state.currentSong.source} />
         <div className="background-image-blur" />
         <div className="background-image-overlay" />
+        <div id="background-bars" className="background-bars"> </div>
         <div className="player-container">
           <div className="artist-container"><Artist /></div>
           <div className="visualization-container"><Visualization /></div>

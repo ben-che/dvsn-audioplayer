@@ -1,6 +1,6 @@
 .background-image-blur {
   position: absolute;
-  z-index:-1;
+  z-index:-2;
   height:100%;
   width:100%;
   background: url('./img/blur.jpeg');
@@ -14,11 +14,20 @@
 
 .background-image-overlay {
   position: absolute;
-  z-index:-2;
+  z-index:-3;
   height:100%;
   width:100%;
   background-color:rgba(255,255,255,0.2);
   background-size:cover;
+  top:0;
+  left:0;
+}
+
+.background-bars {
+  position: absolute;
+  z-index:-1;
+  height:100%;
+  width:100%;
   top:0;
   left:0;
 }

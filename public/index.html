@@ -40,5 +40,53 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        console.log('DOM Ready');
+        let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        let audioElement = document.getElementById('audioPlayer');
+        let barsParent = document.getElementById('background-bars');
+        let audioSrc = audioCtx.createMediaElementSource(audioElement);
+        let analyser = audioCtx.createAnalyser();
+        audioSrc.connect(analyser);
+        audioSrc.connect(audioCtx.destination);
+        let frequencyData = new Uint8Array(200);
+        let svgHeight = '650';
+        let svgWidth = '1200';
+        let barPadding = '0.75';
+
+        function createSvg(parent, height, width) {
+          return (d3.select(barsParent)
+          .append('svg')        
+          .attr('height', height).attr('width', width));      
+        }
+
+        let svg = createSvg('barsParent', svgHeight, svgWidth);
+
+        svg.selectAll('rect')
+          .data(frequencyData)     
+          .enter()                 
+          .append('rect')          
+          .attr('x', function (d, elem) {     
+              return elem * (svgWidth / frequencyData.length);   
+          })
+          .attr('width', svgWidth / frequencyData.length - barPadding); 
+          
+        function renderChart() {
+          requestAnimationFrame(renderChart);
+          analyser.getByteFrequencyData(frequencyData);
+          svg.selectAll('rect')
+              .data(frequencyData) 
+              .attr('height', function(d) { 
+                return d;                       
+              })
+              .attr('fill', function(d) {  
+                return 'rgb('+d +',' +d + ',' + d + ')'; 
+              });
+        }
+        renderChart();
+      })
+    </script>
   </body>
 </html>
