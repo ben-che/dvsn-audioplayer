@@ -7,12 +7,14 @@ import Previous from 'react-icons/lib/fa/angle-double-left';
 
 class Controls extends Component {
   render() {
+    
+
     return (
       <div className="controls-body">
         <div className="info-container">
           <div className="info-flex">
             <p>{this.props.currentSong.name}</p>
-            <p>{this.props.currentSong.duration}</p>
+            <p>{this.props.currentTime !== 0 ? `${this.props.currentTime + ' / '}` : null}  {this.props.currentSong.duration}</p>
           </div>
         </div>
 
@@ -25,7 +27,7 @@ class Controls extends Component {
               </div>
           </div>
         </div>
-
+      
       </div>
     );
   }

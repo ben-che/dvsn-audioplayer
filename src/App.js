@@ -6,10 +6,21 @@ import SongList from "./components/SongList";
 import Visualization from './components/Visualization';
 import Controls from './components/Controls';
 import TrackOne from './music/1.mp3';
+import TrackTwo from './music/2.mp3';
+import TrackThree from './music/3.mp3';
+import TrackFour from './music/4.mp3';
+import TrackFive from './music/5.mp3';
+import TrackSix from './music/6.mp3';
+import TrackSeven from './music/7.mp3';
+import TrackEight from './music/8.mp3';
+import TrackNine from './music/9.mp3';
+import TrackTen from './music/10.mp3';
+
 
 class App extends Component {
   constructor() {
     super();
+    this.audioRef = React.createRef();
     this.state = {
       trackList: [{
         name: 'With Me',
@@ -17,43 +28,50 @@ class App extends Component {
         duration: '6:59'
       },{
         name: 'Too Deep',
-        source: './music/2.mp3',
+        source: TrackTwo,
         duration: '3:20'
       },{
         name: 'Try / Effortless',
-        source: './music/3.mp3',
+        source: TrackThree,
         duration: '5:33'
       },{
         name: 'Do It Well',
-        source: './music/4.mp3',
+        source: TrackFour,
         duration: '4:11'
       },{
         name: 'In + Out',
-        source: './music/5.mp3',
+        source: TrackFive,
         duration: '3:46'
       },{
         name: 'Sept. 5th',
-        source: './music/6.mp3',
+        source: TrackSix,
         duration: '3:56'
       },{
         name: 'Hallucinations',
-        source: './music/7.mp3',
+        source: TrackSeven,
         duration: '4:06'
       },{
         name: 'Another One',
-        source: './music/8.mp3',
+        source: TrackEight,
         duration: '3:49'
       },{
         name: 'Angela',
-        source: './music/9.mp3',
+        source: TrackNine,
         duration: '3:49'
       },{
         name: 'The Line',
-        source: './music/10.mp3',
+        source: TrackTen,
         duration: '7:11'
       }],
       currentSong: {},
+      currentTime: 0,
       isPlaying: false
+    }
+  }
+
+  componentDidUpdate = () => {
+    if (this.state.isPlaying) {
+      this.audioRef.current.play();
     }
   }
 
@@ -91,10 +109,19 @@ class App extends Component {
     }
   }
 
+  componentDidMount = () => {
+    setInterval( () => {
+      this.setState({
+        currentTime : Math.ceil(this.audioRef.current.currentTime)
+      })
+    }, 1000);
+  }
+
   render() {
+  
     return (
       <div style={{'height':'100%'}}>
-        <audio id='x' src = {this.state.currentSong.source} />
+        <audio ref={this.audioRef} src={this.state.currentSong.source} />
         <div className="background-image-blur" />
         <div className="background-image-overlay" />
         <div className="player-container">
@@ -105,7 +132,8 @@ class App extends Component {
           <div className="controls-container"><Controls currentSong = {this.state.currentSong} 
                                                         isPlaying = {this.state.isPlaying}
                                                         playPause = {this.playPause} 
-                                                        nextPrev = {this.nextPrev}/></div>
+                                                        nextPrev = {this.nextPrev}
+                                                        currentTime={this.state.currentTime}/></div>
         </div>
       </div>
     );
