@@ -95,12 +95,15 @@
 }
 
 @media (max-width:511px) {
+  .app-wrap-container{
+    min-height:0px;
+  }
   .player-container {
     height:100%;
     width:100%;
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 20% 60% 20%;
+    grid-template-rows: 20% 70% 10%;
   }
   .background-bars {
     display:none;
@@ -125,5 +128,8 @@
     grid-column-end: 2;
     grid-row-start:3;
     grid-row-end:4;
+  }
+  .visualization-container {
+    display:none;
   }
 }

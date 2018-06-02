@@ -21,3 +21,27 @@
     color:#d896ff;
     font-size:1vw;
   }
+
+  @media (max-width:511px) {
+    .artist-body {
+      padding:0%;
+      padding-right:15%;
+      text-align:right;
+    }
+    .artist-header-thin {
+      padding-top:22%;
+      font-size:26px;
+      font-family: 'Dosis', sans-serif;
+      font-weight:100;
+      color:white;
+      padding-right:5%;
+    }
+  
+    .artist-subheader {
+      font-family: 'Dosis', sans-serif;
+      font-weight:500;
+      color:#d896ff;
+      font-size:16px;
+      padding-right:5%;
+    }
+  }

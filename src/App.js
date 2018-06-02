@@ -134,7 +134,6 @@ class App extends Component {
         <div id="background-bars" className="background-bars"> </div>
         <div className="player-container">
           <div className="artist-container"><Artist /></div>
-          <div className="visualization-container"><Visualization /></div>
           <div className="album-container"><Album /></div>
           <div className="song-list-container"><SongList trackList = {this.state.trackList} currentSong = {this.state.currentSong} selectSong={this.selectSong}/></div>
           <div className="controls-container"><Controls currentSong = {this.state.currentSong} 
