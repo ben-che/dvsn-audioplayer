@@ -93,3 +93,37 @@
   width:50px;
   margin-top:10px;
 }
+
+@media (max-width:511px) {
+  .player-container {
+    height:100%;
+    width:100%;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 60% 20%;
+  }
+  .background-bars {
+    display:none;
+  }
+  .artist-container {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start:1;
+    grid-row-end:2;
+  }
+  .album-container {
+    display:none;
+  }
+  .song-list-container {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start:2;
+    grid-row-end:3;
+  }
+  .controls-container {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start:3;
+    grid-row-end:4;
+  }
+}
