@@ -49,3 +49,33 @@
 .next-prev-disabled {
     cursor:default;
 }
+
+@media (max-width:511px) {
+    .info-container {
+        width:30%;
+    }
+    .info-flex p {
+        height:100%;
+        padding-top:0%;
+    }
+    .info-flex p:first-of-type {
+        height:100%;
+        padding-top:2.25%
+    }
+    .icon-container {
+        width:65%;
+        height:70%;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .play-pause-icon {
+        font-size: 35px;
+        cursor:pointer;
+    }
+    
+    .next-prev-icon {
+        font-size:30px;
+        cursor:pointer
+    }
+}
